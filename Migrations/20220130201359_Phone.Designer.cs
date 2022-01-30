@@ -4,14 +4,16 @@ using Kosorus_Arpad_Hotel.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Kosorus_Arpad_Hotel.Migrations
 {
     [DbContext(typeof(Kosorus_Arpad_HotelContext))]
-    partial class Kosorus_Arpad_HotelContextModelSnapshot : ModelSnapshot
+    [Migration("20220130201359_Phone")]
+    partial class Phone
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -89,10 +91,6 @@ namespace Kosorus_Arpad_Hotel.Migrations
 
                     b.Property<string>("Details")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Floor")
-                        .HasColumnType("nvarchar(60)")
-                        .HasMaxLength(60);
 
                     b.Property<string>("Name")
                         .IsRequired()

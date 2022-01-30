@@ -7,7 +7,7 @@
 
 <h1>Create</h1>
 
-<h4>OwnerModel</h4>
+<h4>Adaugati proprietar nou</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -22,6 +22,11 @@
                 <label asp-for="OwnerModel.Age" class="control-label"></label>
                 <input asp-for="OwnerModel.Age" class="form-control" />
                 <span asp-validation-for="OwnerModel.Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OwnerModel.Phone" class="control-label"></label>
+                <input asp-for="OwnerModel.Phone" class="form-control" />
+                <span asp-validation-for="OwnerModel.Phone" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
