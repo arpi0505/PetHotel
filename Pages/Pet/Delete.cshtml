@@ -24,6 +24,30 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.PetModel.Species)
         </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetModel.Owner)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetModel.Owner.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetModel.StartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetModel.StartDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetModel.EndDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetModel.EndDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PetModel.Room)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PetModel.Room.Id)
+        </dd>
     </dl>
     
     <form method="post">

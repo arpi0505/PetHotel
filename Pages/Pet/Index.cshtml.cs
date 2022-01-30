@@ -24,8 +24,8 @@ namespace Kosorus_Arpad_Hotel.Pages.Pet
         public async Task OnGetAsync()
         {
             PetModel = await _context.PetModel
-                .Include(b => b.Owner)
-                .ToListAsync();
+                .Include(p => p.Owner)
+                .Include(p => p.Room).ToListAsync();
         }
     }
 }

@@ -30,12 +30,16 @@ namespace Kosorus_Arpad_Hotel.Pages.Pet
                 return NotFound();
             }
 
-            PetModel = await _context.PetModel.FirstOrDefaultAsync(m => m.Id == id);
+            PetModel = await _context.PetModel
+                .Include(p => p.Owner)
+                .Include(p => p.Room).FirstOrDefaultAsync(m => m.Id == id);
 
             if (PetModel == null)
             {
                 return NotFound();
             }
+           ViewData["OwnerID"] = new SelectList(_context.OwnerModel, "Id", "Id");
+           ViewData["RoomID"] = new SelectList(_context.RoomModel, "Id", "Id");
             return Page();
         }
 
@@ -65,7 +69,7 @@ namespace Kosorus_Arpad_Hotel.Pages.Pet
                     throw;
                 }
             }
-            ViewData["OwnerID"] = new SelectList(_context.Set<OwnerModel>(), "Id", "Name");
+
             return RedirectToPage("./Index");
         }
 

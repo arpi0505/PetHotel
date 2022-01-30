@@ -21,7 +21,8 @@ namespace Kosorus_Arpad_Hotel.Pages.Pet
 
         public IActionResult OnGet()
         {
-            ViewData["OwnerID"] = new SelectList(_context.Set<OwnerModel>(), "Id", "Name");
+        ViewData["OwnerID"] = new SelectList(_context.OwnerModel, "Id", "Name");
+        ViewData["RoomID"] = new SelectList(_context.RoomModel, "Id", "Name");
             return Page();
         }
 

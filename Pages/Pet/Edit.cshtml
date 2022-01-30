@@ -24,10 +24,26 @@
                 <input asp-for="PetModel.Species" class="form-control" />
                 <span asp-validation-for="PetModel.Species" class="text-danger"></span>
             </div>
-            <label asp-for="PetModel.OwnerID" class="control-label">Owner Name</label>
-			<select asp-for="PetModel.OwnerID" class="form-control" asp-items="ViewBag.OwnerID">
-			</select>
-			<span asp-validation-for="PetModel.OwnerID" class="text-danger"></span>
+            <div class="form-group">
+                <label asp-for="PetModel.OwnerID" class="control-label"></label>
+                <select asp-for="PetModel.OwnerID" class="form-control" asp-items="ViewBag.OwnerID"></select>
+                <span asp-validation-for="PetModel.OwnerID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PetModel.StartDate" class="control-label"></label>
+                <input asp-for="PetModel.StartDate" class="form-control" />
+                <span asp-validation-for="PetModel.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PetModel.EndDate" class="control-label"></label>
+                <input asp-for="PetModel.EndDate" class="form-control" />
+                <span asp-validation-for="PetModel.EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PetModel.RoomID" class="control-label"></label>
+                <select asp-for="PetModel.RoomID" class="form-control" asp-items="ViewBag.RoomID"></select>
+                <span asp-validation-for="PetModel.RoomID" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
