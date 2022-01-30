@@ -4,14 +4,16 @@ using Kosorus_Arpad_Hotel.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Kosorus_Arpad_Hotel.Migrations
 {
     [DbContext(typeof(Kosorus_Arpad_HotelContext))]
-    partial class Kosorus_Arpad_HotelContextModelSnapshot : ModelSnapshot
+    [Migration("20220130153750_RoomModel")]
+    partial class RoomModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

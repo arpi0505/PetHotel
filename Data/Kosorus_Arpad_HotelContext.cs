@@ -15,6 +15,7 @@ namespace Kosorus_Arpad_Hotel.Data
         }
         public DbSet<Kosorus_Arpad_Hotel.Model.PetModel> PetModel { get; set; }
         public DbSet<Kosorus_Arpad_Hotel.Model.OwnerModel> OwnerModel { get; set; }
+        public DbSet<Kosorus_Arpad_Hotel.Model.RoomModel> RoomModel { get; set; }
 
     }
 }
